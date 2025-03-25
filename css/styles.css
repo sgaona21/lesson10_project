@@ -2,3 +2,15 @@
 Steven Gaona STE2342585
 Date: 3/24/25
 */
+
+#name, #email, button {
+    margin-bottom: 1rem;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
