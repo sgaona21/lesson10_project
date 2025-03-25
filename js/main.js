@@ -73,7 +73,7 @@ function formValidation() {
     } 
 }
 
-//and here i called all of my functions into the submit event listener for the form. 
+//and here i called all of my functions into the submit event listener for the form while preventing the page refresh
 myForm.addEventListener("submit", (e) => {
     e.preventDefault();
     nameValidation();
