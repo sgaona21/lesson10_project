@@ -21,7 +21,7 @@ let emailValid = true;
 
 //this function takes a parameter and then clears the innerText of the given element
  function clearErrorMessage(message) {
-    message.innerText = ""
+    message.innerText = "";
  }
 
  //this function determines if the name input is valid. it checks to see if the input is an empty string and then checks to see if the input matches the regular expression
@@ -37,9 +37,9 @@ function nameValidation() {
         nameGreenCheck.innerHTML = "";
         nameValid = false;
     } else {
-        nameValid = true
-        nameGreenCheck.innerText = "✅"
-        clearErrorMessage(nameError)
+        nameValid = true;
+        nameGreenCheck.innerText = "✅";
+        clearErrorMessage(nameError);
     }
 }
 
@@ -49,7 +49,7 @@ function emailValidation() {
 
     if (emailInput.value.trim() == "") {
         emailError.innerText = "Email field cannot be empty";
-        emailGreenCheck.innerText = ""
+        emailGreenCheck.innerText = "";
         emailValid = false;
     } else if (!emailRegEx.test(emailInput.value.trim())) {
         emailError.innerText = "Please use a valid email format";
@@ -58,18 +58,18 @@ function emailValidation() {
     } else {
         emailValid = true
         emailGreenCheck.innerText = "✅";
-        clearErrorMessage(emailError)
+        clearErrorMessage(emailError);
     }
 }
 
 //this funcntion determines the state of the entire form. it checks to see if both the email and name input are both valid and then outputs an error or success message. 
 function formValidation() {
     if (!nameValid || !emailValid) {
-        formError.innerText = "Please make sure form is filled out correctly"
-        clearErrorMessage(successMessage)
+        formError.innerText = "Please make sure form is filled out correctly";
+        clearErrorMessage(successMessage);
     } else if (nameValid && emailValid) {
-        successMessage.innerText = "Form submitted successfully!"
-        clearErrorMessage(formError)
+        successMessage.innerText = "Form submitted successfully!";
+        clearErrorMessage(formError);
     } 
 }
 
